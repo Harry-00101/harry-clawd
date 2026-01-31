@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "skills": {
+    "weather": {
+      "version": "1.0.0",
+      "installedAt": 1769874222473
+    },
+    "tldr": {
+      "version": "1.0.1",
+      "installedAt": 1769874224511
+    },
+    "portable-tools": {
+      "version": "1.2.0",
+      "installedAt": 1769874226560
+    },
+    "calendar": {
+      "version": "1.0.0",
+      "installedAt": 1769874228241
+    },
+    "ssh-essentials": {
+      "version": "1.0.0",
+      "installedAt": 1769874235213
+    },
+    "sysadmin-toolbox": {
+      "version": "1.1.0",
+      "installedAt": 1769874237432
+    },
+    "fzf-fuzzy-finder": {
+      "version": "1.0.0",
+      "installedAt": 1769874239378
+    },
+    "notnative": {
+      "version": "1.0.0",
+      "installedAt": 1769874436929
+    },
+    "mcporter": {
+      "version": "1.0.0",
+      "installedAt": 1769874438413
+    },
+    "oracle": {
+      "version": "1.0.1",
+      "installedAt": 1769874440141
+    },
+    "morning-email-rollup": {
+      "version": "2.1.0",
+      "installedAt": 1769874454840
+    },
+    "web-search-exa": {
+      "version": "1.0.1",
+      "installedAt": 1769874526222
+    },
+    "ddg-search": {
+      "version": "1.0.0",
+      "installedAt": 1769874527844
+    },
+    "ai-alias": {
+      "version": "1.0.2",
+      "installedAt": 1769874529674
+    },
+    "todoist": {
+      "version": "0.2.1",
+      "installedAt": 1769874531205
+    },
+    "agent-browser-clawdbot": {
+      "version": "0.1.0",
+      "installedAt": 1769875244378
+    },
+    "browser-use": {
+      "version": "1.0.0",
+      "installedAt": 1769875246100
+    },
+    "telegram-bot": {
+      "version": "1.0.0",
+      "installedAt": 1769875396315
+    },
+    "local-whisper": {
+      "version": "1.0.0",
+      "installedAt": 1769875419065
+    },
+    "agent-orchestrator": {
+      "version": "0.1.0",
+      "installedAt": 1769875429239
+    },
+    "deep-research": {
+      "version": "1.0.1",
+      "installedAt": 1769875430795
+    },
+    "research": {
+      "version": "1.0.1",
+      "installedAt": 1769875432827
+    },
+    "debug-pro": {
+      "version": "1.0.0",
+      "installedAt": 1769876163513
+    },
+    "ai-explain": {
+      "version": "1.0.1",
+      "installedAt": 1769876165521
+    },
+    "code-reviewer": {
+      "version": "1.0.1",
+      "installedAt": 1769876168134
+    },
+    "coding-agent": {
+      "version": "1.0.1",
+      "installedAt": 1769876170535
+    },
+    "n8n-automation": {
+      "version": "0.1.0",
+      "installedAt": 1769876172592
+    },
+    "git-essentials": {
+      "version": "1.0.0",
+      "installedAt": 1769876192983
+    },
+    "database": {
+      "version": "1.1.0",
+      "installedAt": 1769876194926
+    },
+    "ai-sql": {
+      "version": "1.0.2",
+      "installedAt": 1769876196839
+    },
+    "postgres": {
+      "version": "1.1.0",
+      "installedAt": 1769876199154
+    },
+    "markdown-converter": {
+      "version": "1.0.0",
+      "installedAt": 1769876792153
+    },
+    "nano-pdf": {
+      "version": "1.0.0",
+      "installedAt": 1769876793587
+    },
+    "chart-image": {
+      "version": "2.0.0",
+      "installedAt": 1769876795327
+    },
+    "docker-diag": {
+      "version": "1.0.0",
+      "installedAt": 1769876797220
+    },
+    "security-monitor": {
+      "version": "1.0.0",
+      "installedAt": 1769876824378
+    },
+    "zellij": {
+      "version": "1.0.1",
+      "installedAt": 1769876826721
+    },
+    "imagemagick": {
+      "version": "1.0.0",
+      "installedAt": 1769876828864
+    },
+    "docker-essentials": {
+      "version": "1.0.0",
+      "installedAt": 1769876838617
+    },
+    "kubectl": {
+      "version": "1.0.0",
+      "installedAt": 1769876840964
+    },
+    "kubernetes": {
+      "version": "1.0.0",
+      "installedAt": 1769876843712
+    },
+    "test-runner": {
+      "version": "1.0.0",
+      "installedAt": 1769876853683
+    },
+    "ai-coverage-boost": {
+      "version": "1.0.1",
+      "installedAt": 1769876855535
+    },
+    "test-gen": {
+      "version": "1.0.2",
+      "installedAt": 1769876857607
+    },
+    "moltbook-interact": {
+      "version": "1.0.1",
+      "installedAt": 1769879393888
+    }
+  }
+}

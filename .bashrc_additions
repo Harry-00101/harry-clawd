@@ -1,0 +1,45 @@
+# Harry's AI Assistant System Additions
+
+# System monitoring aliases
+alias sysinfo='echo "=== RAM ===" && free -h && echo "" && echo "=== Disk ===" && df -h / | tail -1 && echo "" && echo "=== Uptime ===" && uptime'
+alias clawd-status='clawdbot status | grep -A 20 "Overview"'
+alias gateway-status='clawdbot gateway status'
+
+# Quick logs
+alias clawd-logs='tail -50 /tmp/clawdbot/clawdbot-$(date +%Y-%m-%d).log 2>/dev/null || tail -50 /tmp/clawdbot/clawdbot.log'
+
+# Process monitoring
+alias psgrep='ps aux | grep -v grep | grep'
+alias topproc='ps aux --sort=-%mem | head -10'
+
+# Network
+alias myip='curl -s ifconfig.me && echo ""'
+alias netcheck='curl -s -o /dev/null -w "%{http_code}" https://google.com'
+
+# Quick helpers
+alias now='date "+%Y-%m-%d %H:%M:%S"'
+alias week='date "+%W"'
+
+# Skill management
+alias skills-list='ls -la /root/clawd/skills/ | grep "^d" | wc -l'
+alias skills-updated='clawdhub update --all'
+
+# Emergency
+alias kill-gateway='pkill -f "clawdbot.*gateway" && echo "Gateway killed"'
+alias restart-gateway='clawdbot gateway restart'
+
+# Environment variables
+export CLAWDBOT_WS_URL="ws://127.0.0.1:18789"
+export EDITOR="vim"
+
+# Quick note capture
+capture() {
+  echo "- $(date '+%Y-%m-%d %H:%M') - $1" >> /root/clawd/memory/quick-notes.md
+  echo "📝 Captured: $1"
+}
+
+# Quick todo add
+todo() {
+  echo "- [ ] $1" >> /root/clawd/memory/todo.md
+  echo "✅ Added to todo: $1"
+}
