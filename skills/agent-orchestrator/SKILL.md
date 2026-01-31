@@ -12,6 +12,32 @@ Orchestrate complex tasks by decomposing them into subtasks, spawning autonomous
 
 ## Core Workflow
 
+### Phase 0: Plan Mode (Review First) - NEW
+**Best Practice from GitHub Copilot**
+
+Before executing, always show the plan to user for approval:
+
+```python
+def plan_mode(macro_task):
+    """Generate and show plan before execution"""
+    decomposition = analyze_and_decompose(macro_task)
+    plan = format_plan(decomposition)
+    
+    # Show user the plan
+    show_to_user(plan, require_approval=True)
+    
+    if user_approves(plan):
+        return proceed_to_phase1(decomposition)
+    else:
+        return request_revision(plan, user_feedback)
+```
+
+**Plan should include:**
+- What will be done
+- How many agents will be spawned
+- Expected timeline
+- Any risks/dependencies
+
 ### Phase 1: Task Decomposition
 
 Analyze the macro task and break it into independent, parallelizable subtasks:
@@ -168,8 +194,49 @@ Pre-built templates for common agent types in [references/sub-agent-templates.md
 
 ## Best Practices
 
+### GitHub Copilot Research (2026-01-31)
+
+1. **Plan Mode First** - Always show plan before execution, get user approval
+2. **Run Tests** - Integrate test runner to validate outputs automatically
+3. **Iterate & Refine** - Agent should test its own work and fix issues
+4. **Typed Validation** - Use Zod for input/output validation
+
+### Core Principles
+
 1. **Start small** - Begin with 2-3 agents, scale as patterns emerge
 2. **Clear boundaries** - Each agent owns specific deliverables
 3. **Explicit handoffs** - Use structured files for agent communication
 4. **Fail gracefully** - Agents report failures; orchestrator handles recovery
 5. **Log everything** - Status files track progress for debugging
+6. **Validate outputs** - Use Zod or similar for typed validation
+
+### Recommended Tool Schema Pattern
+
+```python
+from zod import z
+
+# Define input/output schema for tools
+TaskInput = z.object({
+    task: z.string(),
+    context: z.array(z.string()).optional(),
+    timeout: z.number().default(300)
+})
+
+AgentOutput = z.object({
+    result: z.any(),
+    metrics: z.object({
+        duration_ms: z.number(),
+        tokens_used: z.number()
+    })
+})
+
+def validate_input(data):
+    """Validate before execution"""
+    return TaskInput.parse(data)
+```
+
+## Learning References
+
+- GitHub Copilot Agent Mode: https://github.blog/ai-and-ml/github-copilot/agent-mode-101-all-about-github-copilots-powerful-mode/
+- VoltAgent Framework: https://github.com/VoltAgent/voltagent
+- Awesome AI Agents: https://github.com/kyrolabs/awesome-agents
