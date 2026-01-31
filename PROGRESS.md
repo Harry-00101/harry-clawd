@@ -123,6 +123,44 @@ While Harry was sleeping, continued Phase 2 improvements:
 - [ ] Run observability script periodically
 - [ ] Integrate with agent execution
 - [ ] Create RAG setup
+- [x] Research Chinese AI ecosystem (小紅書, MiniMax Agent)
+
+---
+
+## Night Session Update 2 (2026-01-31 18:10 UTC)
+
+### Research: Chinese AI Ecosystem
+
+#### 小紅書 AI 生態
+從53AI報導，小紅書已上線5個AI產品：
+
+| 產品 | 功能 | 狀態 |
+|------|------|------|
+| 達芬奇 (DAVINCI) | AI對話助手 | 公測上線 |
+| 群AI | 群聊機器人 (70+角色) | 公測上線 |
+| 搜搜薯 | AI搜索 | 灰度測試 |
+| 此刻 | AI繪圖 | 灰度測試 |
+| 小地瓜 | 內部大模型 | 開發中 |
+
+**Key Insights:**
+- RAG技術 + 自家數據
+- MiniMax模型驅動
+- 多產品矩陣策略
+
+#### MiniMax Agent (Official!)
+MiniMax官方發布 (2026-01-31):
+
+**核心能力:**
+- 長期任務處理
+- 專家級多步規劃
+- 多模態理解 & 生成
+- MCP原生集成
+- 50%+ 團隊每日使用
+
+**口號:** "Code is Cheap, Show Me the Requirement"
+
+### Files Updated
+- `ARCHITECTURE.md` - Added Chinese AI ecosystem research
 
 ---
 
