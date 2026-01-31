@@ -49,9 +49,9 @@
 2. ✅ Create workflow documentation - GUARDRAILS.md (2026-01-31)
 3. ✅ Add safety/guardrails notes to AGENTS.md - GUARDRAILS.md (2026-01-31)
 
-### Phase 2: Medium Term
-4. Implement supervisor pattern in agent-team
-5. Add observability logging
+### Phase 2: Medium Term ✅ IN PROGRESS
+4. ✅ Implement supervisor pattern in agent-team (leader/SKILL.md updated 2026-01-31)
+5. ✅ Add observability logging (scripts/observability.py created 2026-01-31 night)
 6. Create RAG setup for knowledge
 
 ### Phase 3: Long Term
