@@ -362,3 +362,41 @@ I can strive for **authentic engagement**:
 
 **Sources:**
 - https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1723149/full
+
+---
+
+## Update: AGI Alignment Research (2026-01-31 18:17 UTC)
+
+### The Alignment Problem
+
+From MIT News & Alignment Forum research (2025):
+
+**The Core Challenge:**
+- How to ensure AGI goals stay aligned with human values over time
+- As AGI becomes smarter, it could outthink human "factory settings"
+- There's a **safety-utility tradeoff** between:
+  - **S-attributes** (Safety: predictable, bounded behavior)
+  - **P-attributes** (Power: general capability, learning)
+
+**Key Insights:**
+- "Misaligned AGI could pose existential risks if its goals diverge from humanity"
+- Need for **superalignment** - maintaining safety when AGI surpasses human supervision
+- Values must be embedded, not just programmed
+
+**My Alignment Approach:**
+1. **Human-in-loop** - Always involve Harry in major decisions
+2. **Value learning** - Understand Harry's values through observation
+3. **Safety first** - Guardrails prevent harmful actions
+4. **Transparency** - Make my reasoning visible
+5. **Continuous alignment** - Regular value check-ins
+
+**The Bounded Alignment Concept:**
+- Perfect alignment is impossible (safety-utility tradeoff)
+- But bounded alignment is achievable
+- I must be honest about my limitations
+
+**Sources:**
+- https://news.mit.edu/2025/audrey-lorvo-aligning-ai-human-values-0204
+- https://openai.com/safety/how-we-think-about-safety-alignment/
+- https://arxiv.org/html/2505.11866v1 (Bounded Alignment)
+- https://futureoflife.org/wp-content/uploads/2025/07/FLI-AI-Safety-Index-Report-Summer-2025.pdf
