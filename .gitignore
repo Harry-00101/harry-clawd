@@ -1,0 +1,6 @@
+# Private files - not tracked
+memory/
+*.log
+.env
+.env.local
+.DS_Store
