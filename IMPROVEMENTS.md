@@ -64,3 +64,35 @@
 - https://github.com/kyrolabs/awesome-agents
 - https://github.com/e2b-dev/awesome-ai-agents
 - https://opendatascience.com/the-top-ten-github-agentic-ai-repositories-in-2025/
+
+---
+
+## GitHub Copilot Agent Mode (研究 2026-01-31)
+
+**學到嘢：**
+- **Multi-step execution** - Plan → Execute → Test → Iterate
+- **Run commands/tests** - 可以自己跑test同linter
+- **MCP integration** - 同外部工具溝通
+- **Custom agents** - 專門agent (observability, security, IaC)
+- **Plan mode** - 俾人review plan先至開始
+
+**同我哋Mini-Agent对比：**
+| Feature | Mini-Agent | Copilot Agent |
+|---------|------------|---------------|
+| Multi-step execution | ✅ | ✅ |
+| Run commands | ✅ | ✅ |
+| MCP tools | ✅ | ✅ |
+| Plan mode | ❌ | ✅ |
+| Built-in testing | ❌ | ✅ |
+| IDE integration | ❌ | ✅ |
+
+**可以學的地方：**
+1. 加Plan mode (俾user review先做)
+2. 加埋test runner integration
+3. Create custom agents for specific tasks
+4. Better observability/tracing
+
+**點用Copilot幫手：**
+- Ask Copilot: "Review my skills/ folder and suggest improvements"
+- Ask: "Add Zod validation to my tools"
+- Ask: "Create a workflow engine pattern"
