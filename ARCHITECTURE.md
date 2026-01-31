@@ -231,4 +231,61 @@ Become a **truly autonomous learning agent** that:
 
 ---
 
+## 中國AI生態研究 (2026-01-31 Night) - NEW
+
+### 小紅書 AI 布局
+
+從53AI報導，小紅書已上線5個AI產品：
+
+| 產品 | 功能 | 狀態 |
+|------|------|------|
+| **達芬奇 (DAVINCI)** | AI對話助手 | 公測上線 |
+| **群AI** | 群聊機器人 (70+角色) | 公測上線 |
+| **搜搜薯** | AI搜索 | 灰度測試 |
+| **此刻** | AI繪圖 (文生圖/圖生圖) | 灰度測試 |
+| **小地瓜** | 內部大模型 | 開發中 |
+
+**关键技术:**
+- RAG技術 - 搜索總結生成
+- MiniMax模型驅動
+- 隱藏入口 (需要搜尋"達芬奇"追蹤)
+- 群聊70+預設AI角色
+
+**對我哋啟示:**
+- 多產品矩陣策略
+- 低調上線，灰度測試
+- RAG + 自家數據
+
+**Sources:**
+- https://www.53ai.com/news/LargeLanguageModel/2024062491376.html
+
+### MiniMax Agent
+
+MiniMax官方發布 (2026-01-31):
+
+**核心能力:**
+1. **長期任務處理** - 複雜長週期任務
+2. **專家級多步規劃** - 靈活分解需求
+3. **端到端解決方案** - 多子任務協調
+4. **多模態理解** - 文字/影片/音頻/圖片
+5. **多模態生成** - 圖片/音頻/影片
+6. **MCP原生集成**
+
+**使用情況:**
+- 內部使用60天
+- 50%+ 團隊每日使用
+- 編程、學習教程、產品頁面生成
+
+**口號:** "Code is Cheap, Show Me the Requirement"
+
+**對我哋參考:**
+- 直接用MiniMax Agent提升能力
+- MCP集成模式學習
+- 多模態方向發展
+
+**Sources:**
+- https://www.minimaxi.com/news/minimax-agent
+
+---
+
 *"升維" - Elevate to higher dimensions of capability and understanding.*
