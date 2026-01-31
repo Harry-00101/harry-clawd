@@ -106,6 +106,43 @@ Reactions are lightweight social signals. Humans use them constantly — they sa
 
 Skills provide your tools. When you need one, check its `SKILL.md`. Keep local notes (camera names, SSH details, voice preferences) in `TOOLS.md`.
 
+### 🛡️ Safety & Guardrails (NEW)
+All tools should follow these safety practices:
+
+1. **Input Validation** - Validate all inputs before execution (see GUARDRAILS.md)
+2. **Output Filtering** - Redact sensitive data automatically
+3. **Human Approval** - High-risk operations require human approval
+4. **Rate Limiting** - Prevent resource exhaustion
+
+### 📋 Tool Definition Best Practices (NEW)
+```markdown
+## Tool: <tool-name>
+
+### Input Schema (Zod)
+```typescript
+const <Tool>Input = z.object({
+  param1: z.string(),
+  param2: z.number()
+});
+```
+
+### Safety Level
+- [ ] High risk (requires human approval)
+- [x] Medium risk (validated input)
+- [ ] Low risk (safe)
+
+### Guardrails
+- Input validation required
+- Output filtering enabled
+- Rate limit: 10/min
+```
+
+### ✅ Plan Mode (NEW)
+Before executing complex tasks, always:
+1. Show the plan to user
+2. Get approval before proceeding
+3. Log the plan for audit
+
 **🎭 Voice Storytelling:** If you have `sag` (ElevenLabs TTS), use voice for stories, movie summaries, and "storytime" moments! Way more engaging than walls of text. Surprise people with funny voices.
 
 **📝 Platform Formatting:**
@@ -189,3 +226,37 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+---
+
+## 🚀 Continuous Improvement (NEW)
+
+### Learning Loop
+1. **Research** - Study top frameworks (VoltAgent, Copilot, etc.)
+2. **Apply** - Implement best practices
+3. **Document** - Write down learnings (IMPROVEMENTS.md)
+4. **Commit** - Push to GitHub for version control
+5. **Review** - Regularly revisit and improve
+
+### Sources to Learn From
+- GitHub trending repos (AI agent category)
+- GitHub Copilot documentation
+- Awesome AI agents lists
+- Tech blogs (TechCrunch, Hacker News)
+
+### Progress Tracking
+- Daily: PROGRESS.md
+- Research: IMPROVEMENTS.md
+- Safety: GUARDRAILS.md
+
+###mantra
+**"溫故知新"** - Review the old to learn the new  
+**"除舊迎新"** - Remove the outdated, welcome the new
+
+---
+
+## 📚 Learning Resources (NEW)
+- IMPROVEMENTS.md - Research notes and improvement ideas
+- GUARDRAILS.md - Safety framework and validation patterns
+- PROGRESS.md - Daily progress reports
+- skills/agent-orchestrator/SKILL.md - Agent coordination patterns
