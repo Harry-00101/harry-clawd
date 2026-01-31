@@ -67,6 +67,52 @@
 
 ---
 
+## High-Level Architecture Design (2026-01-31 Night)
+
+### 研究來源
+- Springer Agentic AI Survey (Nov 2025)
+- IBM Agentic Architecture
+- AGI Framework research (Preprints.org)
+- ORQ.ai Architecture patterns
+
+### Dual-Paradigm Framework
+- **Symbolic/Classical** - Algorithmic planning, persistent state
+- **Neural/Generative** - LLM-based, prompt-driven orchestration
+- **Our Approach:** Hybrid - LLM reasoning + symbolic operations
+
+### Core Modules (5-Layer Architecture)
+1. **Perception** - Input handling, MCP integration
+2. **Cognition** - Planning, reasoning, decision making
+3. **Memory** - Short-term, long-term, RAG
+4. **Action** - Tool execution, output generation
+5. **Safety** - Guardrails, validation, approval
+
+### AGI Core Capabilities
+1. Autonomous Learning
+2. Flexible Reasoning
+3. Cross-Domain Generalization
+4. Adaptive Self-Improvement
+5. Aligned Behavior
+
+### Gap Analysis
+| Capability | Current | Target |
+|------------|---------|--------|
+| Perception | Text | Multi-modal |
+| Memory | File-based | Vector + RAG |
+| Self-Improvement | Manual | Automated |
+
+### Phase 3: Advanced Architecture
+- RAG Integration (Vector DB)
+- Multi-modal Input
+- Ensemble Cognition
+- Automated Self-Improvement
+- Parallel Execution
+
+### Vision
+Become a truly autonomous learning agent that improves itself daily.
+
+---
+
 ## GitHub Copilot Agent Mode (研究 2026-01-31)
 
 **學到嘢：**
