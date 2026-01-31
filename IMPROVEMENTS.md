@@ -35,19 +35,19 @@
 
 ### What We're Missing:
 - ❌ Workflow engine (declarative multi-step)
-- ❌ Guardrails/safety checks
+- ✅ Guardrails/safety checks - GUARDRAILS.md added (2026-01-31)
 - ❌ Observability dashboard
-- ❌ Typed tool validation (Zod)
+- ✅ Typed tool validation (Zod) - GUARDRAILS.md added (2026-01-31)
 - ❌ RAG knowledge base
 - ❌ Eval/benchmark system
-- ❌ Human-in-loop approval flows
+- ✅ Human-in-loop approval flows - GUARDRAILS.md added (2026-01-31)
 
 ## Ideas to Implement
 
-### Phase 1: Quick Wins
-1. Add Zod validation to tools
-2. Create workflow documentation
-3. Add safety/guardrails notes to AGENTS.md
+### Phase 1: Quick Wins ✅ DONE
+1. ✅ Add Zod validation to tools - GUARDRAILS.md (2026-01-31)
+2. ✅ Create workflow documentation - GUARDRAILS.md (2026-01-31)
+3. ✅ Add safety/guardrails notes to AGENTS.md - GUARDRAILS.md (2026-01-31)
 
 ### Phase 2: Medium Term
 4. Implement supervisor pattern in agent-team
