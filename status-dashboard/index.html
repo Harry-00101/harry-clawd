@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <title>🤖 Harry-001 Status</title>
+    <meta http-equiv="refresh" content="30">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; text-align: center; }
+        h1 { color: #00d4ff; margin-bottom: 5px; }
+        .subtitle { color: #888; margin-bottom: 15px; }
+        .emoji { font-size: 5em; margin: 20px 0; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .status { font-size: 1.5em; color: #00ff88; margin-bottom: 25px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+        .card { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 12px; }
+        .card h2 { color: #00d4ff; font-size: 0.95em; margin-bottom: 8px; }
+        .item { display: flex; justify-content: space-between; padding: 4px 0; font-size: 0.85em; }
+        .value { color: #00ff88; }
+        .pulse { display: inline-block; width: 8px; height: 8px; background: #00ff88; border-radius: 50%; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .footer { color: #555; margin-top: 25px; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 Harry-001 Status</h1>
+        <p class="subtitle">AI Assistant | Self-Evolving | Local LLM</p>
+        <div class="emoji" id="emoji">🤖</div>
+        <div class="status" id="status">🤖 Initializing</div>
+        <div class="grid">
+            <div class="card"><h2>💻 System</h2>
+                <div class="item"><span>Status</span><span class="value"><span class="pulse"></span> Active</span></div>
+                <div class="item"><span>Uptime</span><span class="value">Active</span></div>
+            </div>
+            <div class="card"><h2>🧠 LLM</h2>
+                <div class="item"><span>Ollama</span><span class="value">✓</span></div>
+                <div class="item"><span>Phi3</span><span class="value">2.2GB</span></div>
+                <div class="item"><span>LM Studio</span><span class="value">✓</span></div>
+            </div>
+            <div class="card"><h2>📚 Learning</h2>
+                <div class="item"><span>Philosophy</span><span class="value">Hegel ✓</span></div>
+                <div class="item"><span>Files</span><span class="value">3</span></div>
+            </div>
+            <div class="card"><h2>🐙 GitHub</h2>
+                <div class="item"><span>Commit</span><span class="value">84cd7ed</span></div>
+                <div class="item"><span>Branch</span><span class="value">master</span></div>
+            </div>
+        </div>
+        <p class="footer">Auto-refresh: 30s | <span id="time">-</span></p>
+    </div>
+    <script>
+        function update() {
+            document.getElementById('time').textContent = new Date().toLocaleString('zh-HK');
+            fetch('/api/status').then(r => r.json()).then(data => {
+                document.getElementById('emoji').textContent = data.emoji;
+                document.getElementById('status').textContent = data.text;
+            });
+        }
+        update();
+        setInterval(update, 5000);
+    </script>
+</body>
+</html>
