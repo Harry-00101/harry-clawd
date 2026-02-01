@@ -4,3 +4,9 @@ memory/
 .env
 .env.local
 .DS_Store
+
+# API Keys and Credentials
+~/.config/
+**/credentials.json
+**/*.key
+**/apikey*
