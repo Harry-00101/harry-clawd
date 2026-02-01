@@ -1,10 +1,28 @@
 # Image Generation Skill
 
-AI image generation using various APIs and tools.
+AI image generation using various tools.
 
-## Options
+## 1. Hugging Face Inference API (FREE!)
 
-### 1. Replicate (Flux, SDXL, etc.)
+**No GPU needed** - Uses HF's free inference API.
+
+```bash
+pip install huggingface_hub
+export HF_TOKEN="your-huggingface-token"
+```
+
+```python
+from huggingface_hub import InferenceClient
+
+client = InferenceClient(token="your-token")
+image = client.text_to_image("A robot girl with silver hair")
+image.save("robot.png")
+```
+
+**Get free token:** https://huggingface.co/settings/tokens
+
+## 2. Replicate (Paid, GPU)
+
 ```bash
 pip install replicate
 export REPLICATE_API_TOKEN="your-token"
@@ -12,38 +30,11 @@ export REPLICATE_API_TOKEN="your-token"
 
 ```python
 import replicate
-
-output = replicate.run(
-    "black-forest-labs/flux-schnell",
-    input={
-        "prompt": "A robot girl with silver hair, blue eyes, anime style",
-        "width": 1024,
-        "height": 1024
-    }
-)
-print(output[0])
+output = replicate.run("black-forest-labs/flux-schnell", input={"prompt": "..."})
 ```
 
-### 2. OpenAI DALL-E
-```bash
-pip install openai
-```
+## 3. Local Diffusers (FREE, needs GPU)
 
-```python
-from openai import OpenAI
-client = OpenAI(api_key="your-key")
-
-response = client.images.generate(
-    model="dall-e-3",
-    prompt="A futuristic robot girl in a cozy cafe",
-    size="1024x1024",
-    quality="standard",
-    n=1,
-)
-print(response.data[0].url)
-```
-
-### 3. Hugging Face (Free, local)
 ```bash
 pip install diffusers torch transformers
 ```
@@ -52,14 +43,10 @@ pip install diffusers torch transformers
 from diffusers import StableDiffusionPipeline
 import torch
 
-pipe = StableDiffusionPipeline.from_pretrained(
-    "runwayml/stable-diffusion-v1-5",
-    torch_dtype=torch.float16
-)
+pipe = StableDiffusionPipeline.from_pretrained("runwayml/stable-diffusion-v1-5")
 pipe = pipe.to("cuda")
-
-image = pipe("anime robot girl, silver hair, blue eyes").images[0]
-image.save("robot_girl.png")
+image = pipe("A robot girl").images[0]
+image.save("robot.png")
 ```
 
 ## Prompt Structure
@@ -71,12 +58,23 @@ image.save("robot_girl.png")
 Example:
 ```
 White robotic girl, silver bob hair, large headphones with 
-blue lights, blue eyes, mechanical joints visible, anime 
-style, soft warm lighting, cozy cafe setting, friendly expression
+blue lights, blue eyes, anime style, soft lighting, cafe background
+```
+
+## Usage
+
+```bash
+# Hugging Face (free)
+export HF_TOKEN="hf_xxxxx"
+python3 skills/image-gen/hf_generate.py "A robot girl"
+
+# Replicate (paid)
+export REPLICATE_API_TOKEN="r8_xxxxx"
+python3 skills/image-gen/generate.py "A robot girl"
 ```
 
 ## Resources
 
+- Hugging Face: https://huggingface.co/docs/hub/inference
 - Replicate: https://replicate.com/
-- OpenAI DALL-E: https://platform.openai.com/docs/dall-e
-- Hugging Face: https://huggingface.co/docs/diffusers
+- Diffusers: https://huggingface.co/docs/diffusers
