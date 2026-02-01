@@ -105,3 +105,64 @@
 ---
 
 **HK Tech RSS Feeds = Local Intelligence for Harry-001! 🇭🇰**
+
+---
+
+## 📈 HKEX RSS Feeds (Hong Kong Stock Exchange)
+
+**Ultimate source for Hong Kong financial news!**
+
+### Priority Feeds for Harry-001
+
+| # | Feed | URL | Priority |
+|---|------|-----|----------|
+| **1** | **News Releases** | https://www.hkex.com.hk/Services/RSS-Feeds/News-Releases?sc_lang=en | ⭐⭐⭐⭐⭐ |
+| **2** | **Regulatory Announcements** | https://www.hkex.com.hk/Services/RSS-Feeds/regulatory-announcements?sc_lang=en | ⭐⭐⭐⭐⭐ |
+| **3** | **Market Communications** | https://www.hkex.com.hk/Services/RSS-Feeds/market-communications?sc_lang=en | ⭐⭐⭐⭐ |
+
+### Complete Feed List
+
+| Feed | URL | Description |
+|------|-----|-------------|
+| News Releases | https://www.hkex.com.hk/Services/RSS-Feeds/News-Releases?sc_lang=en | Official HKEX news |
+| Regulatory Announcements | https://www.hkex.com.hk/Services/RSS-Feeds/regulatory-announcements?sc_lang=en | Market regulations |
+| Market Communications | https://www.hkex.com.hk/Services/RSS-Feeds/market-communications?sc_lang=en | Market updates |
+| Listing Rules Updates | https://www.hkex.com.hk/Services/RSS-Feeds/Updates-to-Rules-and-Guidance-on-Listing-Matters?sc_lang=en | Listing rule changes |
+| SEHK Trading Rules | https://www.hkex.com.hk/Services/RSS-Feeds/Updates-to-Trading-Rules-of-SEHK?sc_lang=en | SEHK rule updates |
+| HKFE Trading Rules | https://www.hkex.com.hk/Services/RSS-Feeds/Updates-to-Trading-Rules-of-HKFE?sc_lang=en | HKFE rule updates |
+| HKSCC Rules | https://www.hkex.com.hk/Services/RSS-Feeds/Updates-to-the-Rules-of-HKSCC?sc_lang=en | HKSCC clearing rules |
+| HKCC Rules | https://www.hkex.com.hk/Services/RSS-Feeds/Updates-to-the-Rules-of-HKCC?sc_lang=en | HKCC rules |
+| SEOCH Rules | https://www.hkex.com.hk/Services/RSS-Feeds/Updates-to-the-Rules-of-SEOCH?sc_lang=en | SEOCH rules |
+| OTC Clear Rules | https://www.hkex.com.hk/Services/RSS-Feeds/Updates-to-the-Rules-of-OTC-Clear?sc_lang=en | OTC Clear rules |
+
+### 🎯 For Harry-001
+
+**Why HKEX feeds matter:**
+1. **Real-time market news** - Instant updates on HK market
+2. **Regulatory announcements** - Important for investors
+3. **Trading rule changes** - Stay compliant
+4. **Official source** - Trusted, authoritative
+5. **Financial focus** - Perfect for VOO analysis
+
+### 📊 Keywords to Filter
+
+- stock, shares, equity
+- market, trading, listing
+- hong kong, hkex, sehk
+- IPO, announcement, results
+- earnings, dividend, bonus
+
+### 🔄 Integration
+
+Add to continuous learning:
+```python
+HKEX_FEEDS = {
+    "hkex_news": "https://www.hkex.com.hk/Services/RSS-Feeds/News-Releases?sc_lang=en",
+    "hkex_regulatory": "https://www.hkex.com.hk/Services/RSS-Feeds/regulatory-announcements?sc_lang=en",
+    "hkex_market": "https://www.hkex.com.hk/Services/RSS-Feeds/market-communications?sc_lang=en",
+}
+```
+
+---
+
+**🇭🇰 HKEX = Ultimate Hong Kong Financial News Source!** 📈
