@@ -1,0 +1,7 @@
+{
+  "price_alert_threshold": 0.05,
+  "volume_spike_multiplier": 2.0,
+  "check_interval": 300,
+  "telegram_token": "",
+  "telegram_chat_id": ""
+}
