@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-02-01 02:18",
+  "ticker": "VOO",
+  "firecrawl": {
+    "step": "Firecrawl",
+    "ticker": "VOO",
+    "news": [
+      "VOO Q4 earnings beat expectations",
+      "VOO announces new product line",
+      "Analysts upgrade VOO to Buy"
+    ],
+    "source": "finance.yahoo.com"
+  },
+  "ocr": {
+    "step": "PaddleOCR",
+    "chart": "voo-chart.png",
+    "extracted": {
+      "price": "520.45",
+      "change": "+2.3%",
+      "volume": "4.2M",
+      "ma50": "515.20",
+      "ma200": "498.30"
+    }
+  },
+  "webcheck": {
+    "step": "Web-Check",
+    "url": "https://finance.yahoo.com",
+    "verified": true,
+    "tech": [
+      "Cloudflare",
+      "Nginx",
+      "React"
+    ],
+    "security": {
+      "ssl": "Valid",
+      "headers": "Secure"
+    }
+  },
+  "analysis": {
+    "sentiment": "Bullish",
+    "price_target": 598.5175,
+    "recommendation": "Consider buying on dips",
+    "risk_level": "Medium",
+    "key_factors": [
+      "VOO Q4 earnings beat expectations",
+      "VOO announces new product line"
+    ]
+  }
+}
