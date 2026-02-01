@@ -1,0 +1,5 @@
+0 8 * * * /root/clawd/automation/harry-001-automator.sh morning >> /root/clawd/logs/automation.log 2>&1
+0 9 * * * /root/clawd/automation/harry-001-automator.sh voo >> /root/clawd/logs/automation.log 2>&1
+0 12 * * * /root/clawd/automation/harry-001-automator.sh market >> /root/clawd/logs/automation.log 2>&1
+0 23 * * * /root/clawd/automation/harry-001-automator.sh commit >> /root/clawd/logs/automation.log 2>&1
+*/30 * * * * /root/clawd/automation/harry-001-automator.sh status thinking >> /root/clawd/logs/automation.log 2>&1

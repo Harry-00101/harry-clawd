@@ -1,0 +1,15 @@
+[Unit]
+Description=Harry-001 AI Assistant
+After=network.target
+
+[Service]
+Type=forking
+User=root
+WorkingDirectory=/root/clawd
+ExecStart=/bin/bash /root/clawd/deploy/start-harry001.sh
+ExecStop=/bin/bash -c "pkill -f 'serve.*3000'; pkill -f 'ollama serve'"
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
