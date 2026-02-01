@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
 24/7 Continuous Learning System
-Monitors: Financial, Workplace, AI, Tech sources
+Monitors: Financial, Workplace, AI, Tech, HK Sources
 """
 
 import requests
 import subprocess
 import os
 import time
+import feedparser
 from datetime import datetime
 
 LOG_FILE = "/root/clawd/logs/continuous-learning.log"
@@ -19,16 +20,41 @@ def log(msg):
     with open(LOG_FILE, "a") as f:
         f.write(f"[{ts}] {msg}\n")
 
-# Sources to monitor (Financial + Workplace + AI/Tech)
+# HK Tech RSS Feeds (NEW!)
+HK_RSS_FEEDS = {
+    "fintech_news_hk": {
+        "url": "https://fintechnews.hk/feed/",
+        "filter": ["fintech", "finance", "hong kong", "ai", "technology", "blockchain", "payment"],
+        "language": "en"
+    },
+    "techcrunch_hk": {
+        "url": "https://techcrunch.com/tag/hong-kong/feed/",
+        "filter": ["hong kong", "startup", "ai", "fintech", "technology"],
+        "language": "en"
+    },
+    "hk_it_federation": {
+        "url": "https://www.hkitf.org.hk/feed",
+        "filter": ["technology", "ai", "business", "innovation"],
+        "language": "en"
+    },
+    "unwire_hk": {
+        "url": "https://unwire.hk/feed/",
+        "filter": ["科技", "AI", "香港", "金融", "股票", "人工智能", "科技新聞"],
+        "language": "zh"
+    },
+    "pts_tech": {
+        "url": "https://www.ptsconsulting.com.hk/feed/",
+        "filter": ["technology", "ai", "cybersecurity", "cloud"],
+        "language": "en"
+    },
+}
+
+# Sources to monitor
 SOURCES = {
     # Financial Sources
     "github_finance": {
         "url": "https://api.github.com/search/repositories?q=stars:today&sort=stars&per_page=15",
         "filter": ["finance", "stock", "trading", "invest", "crypto", "bitcoin", "python", "api", "yfinance", "pandas", "quant"]
-    },
-    "financial_news": {
-        "url": "https://newsapi.org/v2/top-headlines?category=business&language=en&pageSize=10",
-        "filter": ["stock", "market", "crypto", "economy", "finance", "trading"]
     },
     "hacker_news_finance": {
         "url": "https://hacker-news.firebaseio.com/v0/topstories.json",
@@ -40,12 +66,8 @@ SOURCES = {
         "url": "https://api.github.com/search/repositories?q=stars:today&sort=stars&per_page=15",
         "filter": ["productivity", "automation", "workflow", "notion", "todoist", "calendar", "task", "project", "management"]
     },
-    "github_workplace": {
-        "url": "https://api.github.com/search/repositories?q=stars:today&sort=stars&per_page=15",
-        "filter": ["slack", "discord", "team", "collaboration", "communication", "meeting", "remote", "office"]
-    },
     
-    # AI/Tech (existing)
+    # AI/Tech Sources
     "github_ai": {
         "url": "https://api.github.com/search/repositories?q=stars:today&sort=stars&per_page=15",
         "filter": ["llm", "ai", "agent", "automation", "python", "api", "tool"]
@@ -59,6 +81,47 @@ SOURCES = {
         "filter": ["ai", "llm", "agent", "automation", "finance", "stock", "productivity"]
     }
 }
+
+def learn_hk_rss_feeds():
+    """Learn from Hong Kong Tech RSS Feeds (NEW!)."""
+    log("🇭🇰 Learning: HK Tech RSS Feeds...")
+    
+    for feed_name, feed_info in HK_RSS_FEEDS.items():
+        try:
+            log(f"  📰 Parsing: {feed_name}")
+            feed = feedparser.parse(feed_info["url"])
+            
+            if feed.bozo:
+                log(f"  ⚠️ Error parsing {feed_name}")
+                continue
+            
+            count = 0
+            for entry in feed.entries[:5]:  # Top 5 from each feed
+                title = entry.get("title", "")
+                summary = entry.get("summary", "")[:300]
+                link = entry.get("link", "")
+                
+                # Filter by keywords
+                content = (title + " " + summary).lower()
+                for keyword in feed_info["filter"]:
+                    if keyword.lower() in content:
+                        save_learning(f"ss-{feed_namehk-r}-{entry.get('id', title[:20])}", {
+                            "source": f"HK RSS: {feed_name}",
+                            "title": title,
+                            "summary": summary,
+                            "url": link,
+                            "type": "hk-tech-news",
+                            "language": feed_info["language"]
+                        })
+                        count += 1
+                        break
+            
+            log(f"    ✅ Learned {count} articles from {feed_name}")
+            
+        except Exception as e:
+            log(f"  ⚠️ Error with {feed_name}: {e}")
+    
+    log("  📊 HK RSS Learning Complete")
 
 def learn_github_finance():
     """Learn from GitHub finance/trading repos."""
@@ -111,34 +174,6 @@ def learn_github_productivity():
                         count += 1
                         break
             log(f"  ✅ Learned {count} productivity repos")
-    except Exception as e:
-        log(f"  ⚠️ Error: {e}")
-
-def learn_hacker_news_finance():
-    """Learn financial stories from Hacker News."""
-    log("📈 Learning: HN Finance...")
-    try:
-        r = requests.get(SOURCES["hacker_news_finance"]["url"], timeout=10)
-        if r.status_code == 200:
-            top_ids = r.json()[:20]
-            count = 0
-            for story_id in top_ids:
-                story_r = requests.get(f"https://hacker-news.firebaseio.com/v0/item/{story_id}.json", timeout=5)
-                if story_r.status_code == 200:
-                    story = story_r.json()
-                    title = story.get("title", "").lower()
-                    for keyword in SOURCES["hacker_news_finance"]["filter"]:
-                        if keyword in title:
-                            save_learning(f"hn-finance-{story_id}", {
-                                "source": "Hacker News Finance",
-                                "title": story.get("title"),
-                                "url": story.get("url", f"https://news.ycombinator.com/item?id={story_id}"),
-                                "score": story.get("score"),
-                                "type": "finance-news"
-                            })
-                            count += 1
-                            break
-            log(f"  ✅ Learned {count} finance stories")
     except Exception as e:
         log(f"  ⚠️ Error: {e}")
 
@@ -248,6 +283,7 @@ def save_learning(key, data):
 
 ## Tags
 {data.get('type', '')}
+{data.get('language', '')}
 """
     
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -270,15 +306,17 @@ def commit_all():
 def main():
     """Main continuous learning loop."""
     log("=" * 60)
-    log("🔄 24/7 Continuous Learning System (Financial + Workplace)")
+    log("🔄 24/7 Continuous Learning System (with HK RSS!)")
     log("=" * 60)
     
     while True:
         log("\n--- Learning Cycle ---")
         
+        # 🇭🇰 HK Tech RSS (NEW!)
+        learn_hk_rss_feeds()
+        
         # Financial Learning
         learn_github_finance()
-        learn_hacker_news_finance()
         
         # Workplace/Productivity Learning
         learn_github_productivity()
