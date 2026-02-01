@@ -5,7 +5,7 @@
 
 > Document OCR
 
-**Auto-learned:** 2026-02-01T02:45:03.276355
+**Auto-learned:** 2026-02-01T02:50:02.940225
 
 ## Learn→Try→Production
 
