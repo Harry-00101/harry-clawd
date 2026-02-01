@@ -10,3 +10,12 @@ memory/
 **/credentials.json
 **/*.key
 **/apikey*
+# Secrets - Never commit!
+.env
+.env.local
+.config/1password/secrets.json
+.config/replicate.json
+.config/huggingface.json
+*.pem
+*.key
+secrets/
