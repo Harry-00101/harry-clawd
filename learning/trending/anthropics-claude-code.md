@@ -5,7 +5,7 @@
 
 > Agentic coding tool
 
-**Auto-learned:** 2026-02-01T02:55:03.541969
+**Auto-learned:** 2026-02-01T03:00:03.740525
 
 ## Learn→Try→Production
 
