@@ -5,7 +5,7 @@
 
 > AI assistant
 
-**Auto-learned:** 2026-02-01T02:35:02.311624
+**Auto-learned:** 2026-02-01T02:40:02.236422
 
 ## Learn→Try→Production
 

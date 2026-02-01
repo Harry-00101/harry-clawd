@@ -5,7 +5,7 @@
 
 > 1-bit LLM models
 
-**Auto-learned:** 2026-02-01T02:35:02.312399
+**Auto-learned:** 2026-02-01T02:40:02.237296
 
 ## Learn→Try→Production
 
