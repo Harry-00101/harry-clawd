@@ -5,7 +5,7 @@
 
 > Web scraping for AI
 
-**Auto-learned:** 2026-02-01T02:05:03.040419
+**Auto-learned:** 2026-02-01T02:10:21.446531
 
 ## Learn→Try→Production
 
