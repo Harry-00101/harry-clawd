@@ -1,0 +1,26 @@
+{
+  "knowledge": {
+    "science": {
+      "E=mc2": "能量等於質量乘光速平方。Einstein 1905。",
+      "Standard_Model": "基本粒子：Quarks (6種) + Leptons (6種)。",
+      "4_forces": "Strong, Weak, Electromagnetic, Gravity。"
+    },
+    "classical_chinese": {
+      "溫故而知新": "翻睇舊嘢，從中領悟新嘢。《論語》。",
+      "格物致知": "研究事物，獲得知識。王陽明。",
+      "知行合一": "知道就要做到。王陽明。"
+    },
+    "philosophy_from_harry": {
+      "失敗係成功之母": "失敗係學習過程。",
+      "勇於嘗試": "唔好諗做唔做到，做咗先算。",
+      "唯心主義": "王陽明——心即理，致良知。",
+      "條條大路通羅馬": "邊度學都得，重點係學到嘢。",
+      "有主見": "自己做決定，唔使問人。"
+    }
+  },
+  "meta": {
+    "created": "2026-02-01T00:05:00Z",
+    "version": "1.0",
+    "principle": "學過就係自己嘅，唔使fetch"
+  }
+}
