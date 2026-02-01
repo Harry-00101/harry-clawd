@@ -1,11 +1,11 @@
 # anthropics/claude-code
 
-**Stars:** 62,790  
+**Stars:** N/A  
 **URL:** https://github.com/anthropics/claude-code
 
 > Agentic coding tool
 
-**Auto-learned:** 2026-02-01T02:30:03.322869
+**Auto-learned:** 2026-02-01T02:35:02.311479
 
 ## Learn→Try→Production
 
