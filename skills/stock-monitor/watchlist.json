@@ -2,9 +2,9 @@
   "hk": [
     "3466.HK",  # Hang Seng High Dividend 30 Index ETF
     "3416.HK",  # Global X HSCEI Covered Call Active ETF
-    "2802.HK",  # CSOP HSCEI Covered Call Active ETF Class A HKD
-    "3441.HK",  # CSOP FTSE East-West Equity Select ETF
-    "3442.HK"   # CSOP HKUSTECH / CSOP Hang Seng HK-US TECH ETF
+    "2802.HK",  # CSOP HSCEI Covered Call Active ETF
+    "3441.HK",  # 南方東西精選 / CSOP FTSE East-West Equity Select ETF
+    "3442.HK"   # CSOP HKUSTECH
   ],
   "us": [
     "VOO",      # Vanguard S&P 500 ETF
