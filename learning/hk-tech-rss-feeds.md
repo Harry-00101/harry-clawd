@@ -166,3 +166,76 @@ HKEX_FEEDS = {
 ---
 
 **🇭🇰 HKEX = Ultimate Hong Kong Financial News Source!** 📈
+
+---
+
+## 📰 MarketWatch RSS Feeds
+
+**Dow Jones Financial News - Global Market Coverage!**
+
+### Top Feeds for Harry-001
+
+| # | Feed | URL | Priority |
+|---|------|-----|----------|
+| **1** | **Markets** | https://www.marketwatch.com/site/markets/rss | ⭐⭐⭐⭐⭐ |
+| **2** | **Investing** | https://www.marketwatch.com/site/investing/rss | ⭐⭐⭐⭐⭐ |
+| **3** | **Personal Finance** | https://www.marketwatch.com/site/pf/rss | ⭐⭐⭐ |
+| **4** | **Technology** | https://www.marketwatch.com/site/technology/rss | ⭐⭐⭐ |
+| **5** | **Economy** | https://www.marketwatch.com/site/economy/rss | ⭐⭐⭐⭐ |
+
+### Complete Feed List
+
+| Feed | URL | Description |
+|------|-----|-------------|
+| Markets | https://www.marketwatch.com/site/markets/rss | Global market news |
+| Investing | https://www.marketwatch.com/site/investing/rss | Investment strategies |
+| Personal Finance | https://www.marketwatch.com/site/pf/rss | PF, retirement, taxes |
+| Technology | https://www.marketwatch.com/site/technology/rss | Tech sector news |
+| Economy | https://www.marketwatch.com/site/economy/rss | Economic indicators |
+| News | https://www.marketwatch.com/site/news/rss | Breaking news |
+| Options | https://www.marketwatch.com/options/rss | Options trading |
+| Futures | https://www.marketwatch.com/futures/rss | Commodities futures |
+| Forex | https://www.marketwatch.com/forex/rss | Currency trading |
+| Cryptocurrencies | https://www.marketwatch.com/cryptocurrencies/rss | Crypto market |
+
+### 🎯 For Harry-001
+
+**Why MarketWatch feeds matter:**
+1. **Global market coverage** - US + International markets
+2. **Dow Jones quality** - Trusted financial journalism
+3. **Real-time updates** - Breaking market news
+4. **Diverse topics** - Stocks, crypto, forex, options
+5. **Perfect complement** - HKEX (local) + MarketWatch (global)
+
+### 📊 Keywords to Filter
+
+- stock, market, dow jones, s&p, nasdaq
+- investing, trading, portfolio
+- crypto, bitcoin, cryptocurrency
+- forex, currency, dollar
+- economy, gdp, inflation, fed
+- earnings, results, dividend
+
+### 🔄 Integration
+
+```python
+MARKETWATCH_FEEDS = {
+    "mw_markets": "https://www.marketwatch.com/site/markets/rss",
+    "mw_investing": "https://www.marketwatch.com/site/investing/rss",
+    "mw_economy": "https://www.marketwatch.com/site/economy/rss",
+    "mw_crypto": "https://www.marketwatch.com/cryptocurrencies/rss",
+}
+```
+
+### 📈 Combined Financial News Coverage
+
+| Source | Focus | Priority |
+|--------|-------|----------|
+| **HKEX** | Hong Kong Market | ⭐⭐⭐⭐⭐ |
+| **MarketWatch** | Global Markets | ⭐⭐⭐⭐⭐ |
+| **Fintech News HK** | HK Fintech | ⭐⭐⭐ |
+| **Hacker News Finance** | Tech + Finance | ⭐⭐⭐ |
+
+---
+
+**📰 MarketWatch + HKEX = Complete Market Intelligence!** 📊
