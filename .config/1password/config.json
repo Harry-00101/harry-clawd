@@ -1,0 +1,10 @@
+{
+  "status": "not_configured",
+  "install_url": "https://1password.com/downloads/cli/",
+  "setup_url": "https://developer.1password.com/docs/cli/get-started",
+  "usage": {
+    "signin": "op signin <subdomain>.1password.com <email>",
+    "get_secret": "op item get <item-id> --fields <field>",
+    "list_secrets": "op item list --vault=Private"
+  }
+}
