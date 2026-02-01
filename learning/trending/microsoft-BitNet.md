@@ -5,7 +5,7 @@
 
 > 1-bit LLM inference
 
-**Auto-learned:** 2026-02-01T02:25:03.645792
+**Auto-learned:** 2026-02-01T02:30:03.322160
 
 ## Learn→Try→Production
 
