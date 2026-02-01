@@ -1,13 +1,10 @@
 {
   "hk": [
-    "0700.HK",  # Tencent
-    "9988.HK",  # Alibaba
-    "3690.HK",  # Kuaishou
-    "1024.HK",  # Kuaishou (P)
-    "9618.HK",  # JD Health
-    "3690.HK",  # Meituan
-    "232.HK",   # HKT
-    "6820.HK"   # AIA
+    "3466.HK",  # Sun Hung Kai
+    "3416.HK",  # Cathay Pacific Airways
+    "2802.HK",  # HK Electric Investments
+    "3441.HK",  # GDS Holdings
+    "3442.HK"   # Liu Chong Hing
   ],
   "us": [
     "AAPL",     # Apple
