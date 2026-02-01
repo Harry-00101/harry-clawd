@@ -1,0 +1,16 @@
+{
+  "provider": "google",
+  "status": "not_configured",
+  "required_env_vars": [
+    "GOOGLE_CLIENT_ID",
+    "GOOGLE_CLIENT_SECRET", 
+    "GOOGLE_REFRESH_TOKEN"
+  ],
+  "setup_url": "https://console.cloud.google.com/apis/credentials",
+  "instructions": {
+    "step_1": "Go to Google Cloud Console",
+    "step_2": "Create OAuth 2.0 credentials",
+    "step_3": "Enable Google Calendar API",
+    "step_4": "Set environment variables"
+  }
+}
