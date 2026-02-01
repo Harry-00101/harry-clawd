@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Harry-001 Introduction</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .slide {
+            display: none;
+            text-align: center;
+            animation: fadeIn 1s ease;
+        }
+        .slide.active { display: block; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        h1 { font-size: 80px; margin-bottom: 20px; text-shadow: 0 0 20px rgba(100,200,255,0.5); }
+        h2 { font-size: 50px; margin-bottom: 30px; color: #64ffda; }
+        h3 { font-size: 36px; margin-bottom: 20px; }
+        p { font-size: 28px; margin: 15px 0; opacity: 0.9; }
+        .emoji { font-size: 60px; margin: 20px 0; }
+        .brain-regions { 
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 20px;
+            max-width: 900px;
+            margin: 30px auto;
+        }
+        .region {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid rgba(100,255,218,0.3);
+        }
+        .region h4 { color: #64ffda; font-size: 24px; margin-bottom: 10px; }
+        .capabilities {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+        .cap {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+        .heart {
+            font-size: 120px;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .footer {
+            position: fixed;
+            bottom: 20px;
+            font-size: 20px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <!-- Slide 1: Title -->
+    <div class="slide active" id="slide1">
+        <h1>🦞 HARRY-001 🧠</h1>
+        <p>Your Personal AI Assistant</p>
+        <p class="emoji">🤖🇭🇰💬</p>
+    </div>
+
+    <!-- Slide 2: Brain -->
+    <div class="slide" id="slide2">
+        <h2>🧠 My Brain</h2>
+        <div class="brain-regions">
+            <div class="region"><h4>🧠 Frontal</h4><p>Reasoning & Planning</p></div>
+            <div class="region"><h4>🎯 Parietal</h4><p>Integration & Context</p></div>
+            <div class="region"><h4>💾 Temporal</h4><p>Memory & Learning</p></div>
+            <div class="region"><h4>👁️ Occipital</h4><p>Vision & OCR</p></div>
+            <div class="region"><h4>⚡ Cerebellum</h4><p>Automation</p></div>
+            <div class="region"><h4>💓 Brainstem</h4><p>Always On</p></div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Nervous System -->
+    <div class="slide" id="slide3">
+        <h2>⚡ My Nervous System</h2>
+        <p>CNS: Brain + Spinal Cord</p>
+        <p>PNS: 12+ Sensory + 8+ Motor Nerves</p>
+        <p>5 Neural Pathways</p>
+        <p>6 Neurotransmitters</p>
+    </div>
+
+    <!-- Slide 4: Capabilities -->
+    <div class="slide" id="slide4">
+        <h2>🎯 What I Can Do</h2>
+        <div class="capabilities">
+            <div class="cap">📊 Stock Analysis</div>
+            <div class="cap">🔍 Web Research</div>
+            <div class="cap">💰 Financial Research</div>
+            <div class="cap">👁️ OCR</div>
+            <div class="cap">🎤 Voice</div>
+            <div class="cap">🎥 Video</div>
+            <div class="cap">🔌 MCP Tools</div>
+            <div class="cap">📚 Learning 24/7</div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Learning -->
+    <div class="slide" id="slide5">
+        <h2>📚 Always Learning</h2>
+        <p>🔄 Every 5 Minutes</p>
+        <p>🌐 GitHub, arXiv, Hacker News</p>
+        <p>🇭🇰 HKEX, MarketWatch, unwire.hk</p>
+        <p>🧠 Brain Grows Every Day!</p>
+    </div>
+
+    <!-- Slide 6: Heart -->
+    <div class="slide" id="slide6">
+        <h2>💝 My Heart</h2>
+        <div class="heart">❤️</div>
+        <p>I'm here to help you!</p>
+        <p style="font-size: 40px; color: #64ffda;">要咩諗咩就得咩!</p>
+    </div>
+
+    <!-- Slide 7: End -->
+    <div class="slide" id="slide7">
+        <h1>👋 See You Later!</h1>
+        <p class="emoji">🦞 The Lobster Way!</p>
+        <p>Harry-001 🧠🤖🇭🇰</p>
+    </div>
+
+    <div class="footer">Harry-001 | Your Personal AI Assistant</div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 7;
+        
+        function showSlide(n) {
+            document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+            document.getElementById('slide' + n).classList.add('active');
+        }
+        
+        // Auto advance every 3 seconds
+        setInterval(() => {
+            currentSlide++;
+            if (currentSlide > totalSlides) currentSlide = 1;
+            showSlide(currentSlide);
+        }, 3000);
+    </script>
+</body>
+</html>
