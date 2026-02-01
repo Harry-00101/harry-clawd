@@ -1,11 +1,11 @@
 # mendableai/firecrawl
 
-**Stars:** 78,772  
+**Stars:** 78,773  
 **URL:** https://github.com/mendableai/firecrawl
 
 > Web scraping for AI
 
-**Auto-learned:** 2026-02-01T02:50:02.937753
+**Auto-learned:** 2026-02-01T02:55:03.541386
 
 ## Learn→Try→Production
 
