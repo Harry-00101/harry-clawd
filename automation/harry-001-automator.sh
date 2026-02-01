@@ -6,9 +6,9 @@ DATA_DIR="/root/clawd/learning"
 
 log() { echo -e "[$(date '+%H:%M:%S')] $1"; }
 
-voo_analysis() {
-    log "📊 Running VOO Analysis..."
-    /root/clawd/skills/voo-analysis/analyze.sh
+stock_analysis() {
+    log "📊 Running STOCK Analysis..."
+    /root/clawd/skills/stock-analysis/analyze.sh
 }
 
 market_research() {
@@ -38,7 +38,7 @@ morning_routine() {
 
 full_daily() {
     log "🚀 Full Daily Automation..."
-    voo_analysis
+    stock_analysis
     market_research
     git_commit
     log "✅ Complete!"
@@ -57,7 +57,7 @@ help() {
     echo "Usage: /root/clawd/automation/harry-001-automator.sh <command>"
     echo ""
     echo "Commands:"
-    echo "  voo       - VOO analysis"
+    echo "  stock       - STOCK analysis"
     echo "  market    - Market research"
     echo "  status    - Update status"
     echo "  commit    - Git auto-commit"
@@ -68,7 +68,7 @@ help() {
 }
 
 case "${1:-help}" in
-    voo)     voo_analysis ;;
+    stock)     stock_analysis ;;
     market)  market_research ;;
     status)  update_status "${2:-thinking}" ;;
     commit)  git_commit ;;
