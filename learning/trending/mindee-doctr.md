@@ -1,11 +1,11 @@
 # mindee/doctr
 
-**Stars:** N/A  
+**Stars:** 5,826  
 **URL:** https://github.com/mindee/doctr
 
 > Document OCR
 
-**Auto-learned:** 2026-02-01T02:40:02.237039
+**Auto-learned:** 2026-02-01T02:45:03.276355
 
 ## Learn→Try→Production
 

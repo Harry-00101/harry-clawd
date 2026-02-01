@@ -1,11 +1,11 @@
 # microsoft/BitNet
 
-**Stars:** N/A  
+**Stars:** 27,299  
 **URL:** https://github.com/microsoft/BitNet
 
 > 1-bit LLM inference
 
-**Auto-learned:** 2026-02-01T02:40:02.233133
+**Auto-learned:** 2026-02-01T02:45:03.275351
 
 ## Learn→Try→Production
 
