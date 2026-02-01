@@ -1,20 +1,24 @@
 {
   "hk": [
-    "0700.HK",
-    "9988.HK",
-    "3690.HK",
-    "1024.HK",
-    "9618.HK",
-    "3690.HK"
+    "0700.HK",  # Tencent
+    "9988.HK",  # Alibaba
+    "3690.HK",  # Kuaishou
+    "1024.HK",  # Kuaishou (P)
+    "9618.HK",  # JD Health
+    "3690.HK",  # Meituan
+    "232.HK",   # HKT
+    "6820.HK"   # AIA
   ],
   "us": [
-    "AAPL",
-    "MSFT",
-    "GOOGL",
-    "NVDA",
-    "META",
-    "AMZN",
-    "TSLA",
-    "VOO"
+    "AAPL",     # Apple
+    "MSFT",     # Microsoft
+    "GOOGL",    # Google
+    "NVDA",     # NVIDIA
+    "META",     # Meta
+    "AMZN",     # Amazon
+    "TSLA",     # Tesla
+    "VOO",      # Vanguard S&P 500 ETF
+    "QQQ",      # Invesco QQQ Trust
+    "BTC-USD"   # Bitcoin
   ]
 }
