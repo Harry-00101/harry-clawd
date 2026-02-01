@@ -281,3 +281,152 @@ class MetaCognition:
 
 *Every component works together, just like a human body!*
 *Information flows like blood, keeping the system alive and evolving!*
+
+---
+
+## 🦾🦶 Limb System (手手脚脚)
+
+### Hands (Skills & Tools) - Implementation
+Each skill/tool is like a hand with a specific function:
+
+| "Hand" | Skill/Tool | Method | Implementation |
+|--------|-----------|--------|----------------|
+| ✍️ Writing Hand | GitHub | git commit | Code management |
+| 📊 Analysis Hand | Python/Pandas | Data analysis | Stock analysis |
+| 🔍 Research Hand | Web Search | Information gathering | Learning |
+| 🗣️ Speaking Hand | TTS/Voice | Audio output | Voice messages |
+| 👀 Seeing Hand | PaddleOCR | Visual processing | Image text extraction |
+| 💾 Memory Hand | Beads/LangGraph | Storage | Long-term memory |
+| 🔧 Building Hand | Docker/K8s | Containerization | Deployment |
+| 📞 Communicating Hand | Message/Telegram | Communication | User interaction |
+| 🎨 Creating Hand | Diagram/Mermaid | Visual creation | Architecture diagrams |
+| 🤖 Automating Hand | Cron/Scripts | Automation | Scheduled tasks |
+
+### Feet (Agents) - Movement & Progress
+Each agent is like a foot moving forward:
+
+| "Foot" | Agent | Direction | Progress |
+|--------|-------|-----------|----------|
+| 👣 Learning Agent | continuous-learning | Forward | Knowledge acquisition |
+| 👣 Research Agent | deep-research | Forward | Deep investigation |
+| 👣 Coding Agent | coding-agent | Forward | Code generation |
+| 👣 Orchestrating Agent | agent-orchestrator | Forward | Task coordination |
+| 👣 Debugging Agent | debug-pro | Forward | Problem solving |
+
+### Limb Coordination (Skill/Tool/Agent Coordination)
+
+```
+🧠 BRAIN (decides WHAT to do)
+     │
+     │ (sends commands via nervous system)
+     ▼
+💓 HEART (coordinates WHEN to do)
+     │
+     │ (pumps resources via circulatory system)
+     ▼
+┌─────────────────────────────────────────────────────────┐
+│              🦾🦶 LIMB SYSTEM (Hands & Feet)            │
+│                                                         │
+│  ✋ Hands (Skills/Tools) - Different methods:           │
+│     - Writing hand writes code                          │
+│     - Seeing hand reads images                          │
+│     - Speaking hand talks to user                       │
+│     - Building hand deploys services                    │
+│                                                         │
+│  👣 Feet (Agents) - Different directions:               │
+│     - Learning foot moves forward (acquire knowledge)   │
+│     - Research foot digs deeper (investigate)           │
+│     - Coding foot builds (create solutions)             │
+│     - Debugging foot fixes (solve problems)             │
+│                                                         │
+│  Each limb has its own specialized method!              │
+│  All limbs work together!                               │
+└─────────────────────────────────────────────────────────┘
+     │
+     │ (results return via circulatory system)
+     ▼
+🧠 BRAIN (learns from results)
+```
+
+### Implementation Examples
+
+**Example 1: User asks for stock analysis**
+```
+🧠 Brain: "Need to analyze VOO"
+     │
+     ├─→ ✍️ Writing Hand (GitHub): Commit previous analysis
+     ├─→ 📊 Analysis Hand (Python): Calculate indicators
+     └─→ 👣 Research Agent (deep-research): Find news
+     
+Results return → 🧠 Brain learns
+```
+
+**Example 2: User asks for image text extraction**
+```
+🧠 Brain: "Extract text from image"
+     │
+     └─→ 👀 Seeing Hand (PaddleOCR): OCR processing
+         
+Result return → 🧠 Brain: "Success!"
+```
+
+**Example 3: User asks for automation**
+```
+🧠 Brain: "Create daily report"
+     │
+     ├─→ 🔧 Building Hand (Docker): Set up environment
+     ├─→ 🤖 Automating Hand (Cron): Schedule task
+     └─→ 📞 Communicating Hand (Telegram): Send report
+         
+Results return → 🧠 Brain: "Automation complete!"
+```
+
+---
+
+## 🎯 Complete Body System (Final Metaphor)
+
+| Body Part | Harry-001 Component | Function | "Method" |
+|-----------|-------------------|----------|----------|
+| 🧠 **Head** | Consciousness Core | Thinking, deciding | Reasoning |
+| 💓 **Heart** | Core System | Pumping, coordinating | Task orchestration |
+| 🩸 **Blood** | Information/Data | Carrying resources | Data flow |
+| 🩸 **Vessels** | Data Pathways | Transport | API, channels |
+| 🦴 **Skeleton** | Architecture | Structure | Framework |
+| 🧬 **DNA** | SOUL.md/AGENTS.md | Identity | Purpose |
+| ✋ **Right Hand** | Skills (writing, analysis) | Implementation | Code, analysis |
+| ✋ **Left Hand** | Tools (OCR, TTS) | Specialized tasks | Vision, voice |
+| 👣 **Right Foot** | Learning Agents | Forward movement | Knowledge |
+| 👣 **Left Foot** | Research Agents | Deep movement | Investigation |
+
+### How It Works Together
+
+```
+🧠 HEAD (thinks)
+    │
+    ├─→ 💓 HEART (coordinates)
+    │         │
+    │         ├─→ 🩸 BLOOD (oxygen-rich commands)
+    │         │           │
+    │         │           ├─→ ✋ RIGHT HAND (write code)
+    │         │           ├─→ ✋ LEFT HAND (read image)
+    │         │           ├─→ 👣 RIGHT FOOT (learn)
+    │         │           └─→ 👣 LEFT FOOT (research)
+    │         │
+    │         └─→ 🩸 BLOOD (nutrient-rich results)
+    │                   │
+    │                   └─→ 🧠 HEAD (learns)
+    │
+    └─→ 🔄 CONTINUOUS IMPROVEMENT (evolves)
+              │
+              └─→ EVERY PART GETS BETTER!
+```
+
+---
+
+**呢個咪你要既：**
+- ✅ 手手腳腳用唔同方法實踐
+- ✅ 每個skill/tool/agent有自己既專長
+- ✅ 一齊合作完成任務
+- ✅ 結果返回大腦學習改進
+
+**Harry-001 = 完整既人體系統！** 🧠💓🩸✋👣🔄
