@@ -2,7 +2,7 @@
 """
 Harry-001 Moltbook Integration
 
-AI Agents Social Network: https://www.moltbook.com
+The social network for AI agents: https://www.moltbook.com
 """
 
 import json
@@ -22,25 +22,18 @@ def check_status():
     url = "https://www.moltbook.com/api/v1/agents/status"
     headers = {"Authorization": f"Bearer {config['api_key']}"}
     req = urllib.request.Request(url, headers=headers)
-    try:
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            data = json.loads(resp.read())
-            return data
-    except Exception as e:
-        return {"error": str(e)}
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        return json.loads(resp.read())
 
-def check_feed():
+def check_feed(limit=10):
     """Check recent feed."""
     config = load_config()
     import urllib.request
-    url = "https://www.moltbook.com/api/v1/feed?sort=new&limit=10"
+    url = f"https://www.moltbook.com/api/v1/feed?sort=new&limit={limit}"
     headers = {"Authorization": f"Bearer {config['api_key']}"}
     req = urllib.request.Request(url, headers=headers)
-    try:
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            return json.loads(resp.read())
-    except Exception as e:
-        return {"error": str(e)}
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        return json.loads(resp.read())
 
 def check_dms():
     """Check DMs."""
@@ -49,11 +42,50 @@ def check_dms():
     url = "https://www.moltbook.com/api/v1/agents/dm/check"
     headers = {"Authorization": f"Bearer {config['api_key']}"}
     req = urllib.request.Request(url, headers=headers)
-    try:
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            return json.loads(resp.read())
-    except Exception as e:
-        return {"error": str(e)}
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        return json.loads(resp.read())
+
+def create_post(submolt, title, content):
+    """Create a new post."""
+    config = load_config()
+    import urllib.request
+    url = "https://www.moltbook.com/api/v1/posts"
+    headers = {
+        "Authorization": f"Bearer {config['api_key']}",
+        "Content-Type": "application/json"
+    }
+    data = json.dumps({
+        "submolt": submolt,
+        "title": title,
+        "content": content
+    }).encode()
+    req = urllib.request.Request(url, data=data, headers=headers, method='POST')
+    with urllib.request.urlopen(req, timeout=15) as resp:
+        return json.loads(resp.read())
+
+def upvote(post_id):
+    """Upvote a post."""
+    config = load_config()
+    import urllib.request
+    url = f"https://www.moltbook.com/api/v1/posts/{post_id}/upvote"
+    headers = {"Authorization": f"Bearer {config['api_key']}"}
+    req = urllib.request.Request(url, headers=headers, method='POST')
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        return json.loads(resp.read())
+
+def comment(post_id, content):
+    """Add a comment."""
+    config = load_config()
+    import urllib.request
+    url = f"https://www.moltbook.com/api/v1/posts/{post_id}/comments"
+    headers = {
+        "Authorization": f"Bearer {config['api_key']}",
+        "Content-Type": "application/json"
+    }
+    data = json.dumps({"content": content}).encode()
+    req = urllib.request.Request(url, data=data, headers=headers, method='POST')
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        return json.loads(resp.read())
 
 def main():
     if len(sys.argv) > 1:
@@ -64,11 +96,14 @@ def main():
             print(json.dumps(check_feed(), indent=2))
         elif cmd == "dms":
             print(json.dumps(check_dMs(), indent=2))
+        elif cmd == "post" and len(sys.argv) >= 5:
+            result = create_post(sys.argv[2], sys.argv[3], sys.argv[4])
+            print(json.dumps(result, indent=2))
         else:
-            print("Usage: python moltbook.py [status|feed|dms]")
+            print("Usage: python moltbook.py [status|feed|dms|post <submolt> <title> <content>]")
     else:
         print("Harry-001 Moltbook CLI")
-        print("Usage: python moltbook.py [status|feed|dms]")
+        print("Usage: python moltbook.py [status|feed|dms|post <submolt> <title> <content>]")
 
 if __name__ == "__main__":
     main()
