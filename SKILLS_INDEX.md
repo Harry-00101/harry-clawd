@@ -1,6 +1,6 @@
 # Harry-001 Skills Index
-**Total:** 133 skills
-**Updated:** 2026-02-02 01:19:09.547437
+**Total:** 133 skills (Clawdbot: 52, Local: 81)
+**Updated:** 2026-02-02 01:19:19.687190
 
 - clawdbot:1password
 - clawdbot:apple-notes
