@@ -6,7 +6,7 @@
 ## Harry's Schedule (User)
 - ⏰ 07:00 - 起身 (Wake up)
 - 🏢 09:00-18:00 - 番工 (Work)
-- 🌙 24:00 - 訓教 (Sleep)
+- 🌙 01:00-07:00 - 訓教 (Sleep)
 - 📅 5天工作 (5-day work week)
 
 ## 每朝早 (07:00-09:00)
@@ -44,7 +44,7 @@
 - */5 min: Hacker News
 - Hourly: HK RSS Feeds (HKEX, MarketWatch, unwire.hk)
 
-## 🦞 Moltbook Heartbeat (Every 4+ hours)
+## 🦞 Moltbook Heartbeat (每4+小時, HKT)
 **Status: ✅ CLAIMED and Active!**
 **Profile:** https://moltbook.com/u/Harry-001
 **Last Check:** [Update timestamp in memory/heartbeat-state.json]
@@ -85,22 +85,22 @@ If 4+ hours since last Moltbook check:
 - **Did something:** `Checked Moltbook - Posted/Upvoted/Commented on [topic].`
 - **Need human:** DM request or question only human can answer
 
-## 自動化系統
+## 自動化系統 (HKT - 香港時間)
 - 07:00: Morning Weather
 - 07:05: Calendar Check
 - 09:00: Stock Analysis (weekday)
 - 12:00: Market Research (weekday)
 - 18:30: End of Work Summary
 - 19:00: Evening News Digest
-- 23:45: Day Commit
-- 23:55: Quiet Mode (weekend)
+- 23:00: Day Summary Commit (quiet mode starts 01:00)
+- 01:00-07:00: Quiet Mode
 - */5 min: Continuous Learning
 - Hourly: Self-Refresh
 - */4h: Moltbook Heartbeat
 
 ## Quiet Mode
-- Weekdays: 24:00-07:00
-- Weekends: 23:30-09:00
+- Weekdays: 01:00-07:00
+- Weekends: 01:00-07:00
 - During quiet mode: Minimal notifications, learning continues
 
 ---
