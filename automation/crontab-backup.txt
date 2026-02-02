@@ -1,0 +1,41 @@
+# Harry-001 Automated Cron Jobs (HKT Times)
+# All scripts in /root/clawd/automation/cron-scripts/
+
+# Morning Routine (07:00 HKT)
+0 7 * * * /root/clawd/automation/cron-scripts/morning-weather.sh >> /root/clawd/logs/morning-weather.log 2>&1
+
+# Calendar Check (07:05 HKT)
+5 7 * * * /root/clawd/automation/cron-scripts/calendar-check.sh >> /root/clawd/logs/calendar-check.log 2>&1
+
+# Stock Analysis (09:00 HKT - Weekday)
+0 9 * * 1-5 /root/clawd/automation/cron-scripts/stock-analysis.sh >> /root/clawd/logs/stock-analysis.log 2>&1
+
+# Market Research (12:00 HKT - Weekday)
+0 12 * * 1-5 /root/clawd/automation/cron-scripts/market-research.sh >> /root/clawd/logs/market-research.log 2>&1
+
+# Evening Summary (18:30 HKT - Weekday)
+30 18 * * 1-5 /root/clawd/automation/cron-scripts/evening-summary.sh >> /root/clawd/logs/evening-summary.log 2>&1
+
+# News Digest (19:00 HKT)
+0 19 * * * /root/clawd/automation/cron-scripts/news-digest.sh >> /root/clawd/logs/news-digest.log 2>&1
+
+# Day Summary Commit (23:00 HKT)
+0 23 * * * /root/clawd/automation/cron-scripts/day-summary.sh >> /root/clawd/logs/day-summary.log 2>&1
+
+# Quiet Mode Start (23:55 HKT)
+55 23 * * * /root/clawd/automation/cron-scripts/evening-summary.sh >> /root/clawd/logs/quiet-mode.log 2>&1
+
+# Continuous Learning (Every 5 minutes)
+*/5 * * * * /root/clawd/automation/cron-scripts/continuous-learning.sh >> /root/clawd/logs/continuous-learning.log 2>&1
+
+# Hourly Self-Refresh
+0 * * * * /root/clawd/automation/cron-scripts/self-refresh.sh >> /root/clawd/logs/self-refresh.log 2>&1
+
+# Moltbook Heartbeat (Every 4 hours)
+0 */4 * * * /root/clawd/automation/cron-scripts/moltbook-heartbeat.sh >> /root/clawd/logs/moltbook-heartbeat.log 2>&1
+
+# Continuous Improvement - Every Minute
+* * * * * python3 /root/clawd/evolved-harry001/self-refresh/evolve.py >> /root/clawd/logs/evolve.log 2>&1
+
+# Self-Check - Every 30 Seconds (if supported)
+# Note: Standard cron doesn't support seconds, but we check every minute
