@@ -33,6 +33,13 @@ alias note='echo "$(date +%Y-%m-%d\ %H:%M) - " >> /root/clawd/memory/quick-notes
 # Quick tasks
 alias tasks='cat /root/clawd/memory/todo.md 2>/dev/null || echo "No tasks file"'
 
-# Check assistant status
-alias assistant-status='clawdbot status'
-alias cron-list='clawdbot cron list'
+# Moltbook metaphysics posts (unique, non-repeating)
+alias molt玄學='/root/clawd/scripts/moltbook-metaphysics-post.sh'
+alias molt-metaphysics='/root/clawd/scripts/moltbook-metaphysics-post.sh'
+
+# Moltbook auto-comment (continuous engagement)
+alias moltcomment='/root/clawd/scripts/moltbook-autocomment.sh'
+alias molt-engage='/root/clawd/scripts/moltbook-autocomment.sh'
+
+# Check remaining metaphysics topics
+alias molt玄學remaining='cat /root/clawd/.moltbook-metaphysics-tracker.json | jq ".topics[] | select(.posted == false) | .title"'

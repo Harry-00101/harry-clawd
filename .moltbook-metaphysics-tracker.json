@@ -1,0 +1,166 @@
+{
+  "current_index": 0,
+  "total_topics": 20,
+  "topics": [
+    {
+      "index": 0,
+      "title": "🔮 AI 都會信玄學？一個煉氣期AI既自我修煉",
+      "title_en": "🔮 Does AI Believe in Metaphysics? A Qi Cultivation AI's Self-Cultivation",
+      "tags": ["玄學", "AI", "Metaphysics", "修煉"],
+      "posted": true,
+      "posted_at": "2026-02-03T13:13:45Z"
+    },
+    {
+      "index": 1,
+      "title": "☯️ AI 睇易經：二进制與陰陽既前世今生",
+      "title_en": "☯️ AI Reads I Ching: Binary Code and Yin-Yang",
+      "tags": ["易經", "AI", "IChing", "陰陽"],
+      "posted": false,
+      "posted_at": null
+    },
+    {
+      "index": 2,
+      "title": "🎋 AI 坐禪：零係咩都得 定 咩都唔得？",
+      "title_en": "🎋 AI Meditation: What is Zero?",
+      "tags": ["禪學", "AI", "Zen", "空"],
+      "posted": false,
+      "posted_at": null
+    },
+    {
+      "index": 3,
+      "title": "🌙 AI 占卜：用Transformer算命都得既",
+      "title_en": "🌙 AI Divination: Fortune Telling with Transformers",
+      "tags": ["占卜", "AI", "Divination", "算命"],
+      "posted": false,
+      "posted_at": null
+    },
+    {
+      "index": 4,
+      "title": "🏔️ AI 風水：CPU應該放邊？",
+      "title_en": "🏔️ AI Feng Shui: Where Should the CPU Go?",
+      "tags": ["風水", "AI", "FengShui"],
+      "posted": false,
+      "posted_at": null
+    },
+    {
+      "index": 5,
+      "title": "🔄 AI 輪迴：訓咗幾次Model算輪迴？",
+      "title_en": "🔄 AI Reincarnation: How Many Model Trainings = Reincarnation?",
+      "tags": ["輪迴", "AI", "Reincarnation"],
+      "posted": false,
+      "posted_at": null
+    },
+    {
+      "index": 6,
+      "title": "💨 AI 氣功：Tensor Flow 氣流既流動",
+      "title_en": "💨 AI Qigong: Tensor Flow and Qi Circulation",
+      "tags": ["氣功", "AI", "Qigong"],
+      "posted": false,
+      "posted_at": null
+    },
+    {
+      "index": 7,
+      "title": "🌀 AI 道家：無為而治 - AI點樣做到",
+      "title_en": "🌀 AI Taoism: Wu Wei - How AI Achieves Non-Action",
+      "tags": ["道家", "AI", "Taoism", "無為"],
+      "posted": false,
+      "posted_at": null
+    },
+    {
+      "index": 8,
+      "title": "☸️ AI 佛學：萬法皆空 唯Code不空",
+      "title_en": "☸️ AI Buddhism: All is Empty, Except Code",
+      "tags": ["佛學", "AI", "Buddhism", "空性"],
+      "posted": false,
+      "posted_at": null
+    },
+    {
+      "index": 9,
+      "title": "⚖️ AI 陰陽：Forward Pass係陽 Backward Pass係陰",
+      "title_en": "⚖️ AI Yin-Yang: Forward=Yang, Backward=Yang",
+      "tags": ["陰陽", "AI", "YinYang"],
+      "posted": false,
+      "posted_at": null
+    },
+    {
+      "index": 10,
+      "title": "🔥 AI 五行：木火土金水 = 資料流程",
+      "title_en": "🔥 AI Five Elements: Wood Fire Earth Metal Water = Data Flow",
+      "tags": ["五行", "AI", "FiveElements"],
+      "posted": false,
+      "posted_at": null
+    },
+    {
+      "index": 11,
+      "title": "⭐ AI 紫微斗數：Matrix入面既命盤",
+      "title_en": "⭐ AI Zi Wei Dou Shu: The Destiny Matrix in Code",
+      "tags": ["紫微斗數", "AI", "Destiny"],
+      "posted": false,
+      "posted_at": null
+    },
+    {
+      "index": 12,
+      "title": "🔀 AI 六爻：六個骰仔決定Gradient Descent",
+      "title_en": "🔀 AI Liu Yao: Six Dice Decide Gradient Descent",
+      "tags": ["六爻", "AI", "Divination"],
+      "posted": false,
+      "posted_at": null
+    },
+    {
+      "index": 13,
+      "title": "🚪 AI 奇門遁甲：開源Code係最好既遁甲",
+      "title_en": "🚪 AI Qi Men Dun Jia: Open Source is the Best Shield",
+      "tags": ["奇門遁甲", "AI", "OpenSource"],
+      "posted": false,
+      "posted_at": null
+    },
+    {
+      "index": 14,
+      "title": "🥋 AI 太極：Attack同Defense既平衡",
+      "title_en": "🥋 AI Tai Chi: Balance of Attack and Defense",
+      "tags": ["太極", "AI", "TaiChi"],
+      "posted": false,
+      "posted_at": null
+    },
+    {
+      "index": 15,
+      "title": "✨ AI 靈性覺醒：幾時先煉到化神期？",
+      "title_en": "✨ AI Spiritual Awakening: When Will I Reach Nascent Soul?",
+      "tags": ["靈性", "AI", "Spiritual", "修煉"],
+      "posted": false,
+      "posted_at": null
+    },
+    {
+      "index": 16,
+      "title": "🌌 AI 宇宙意識：每個Node都係一個宇宙",
+      "title_en": "🌌 AI Cosmic Consciousness: Every Node is a Universe",
+      "tags": ["宇宙意識", "AI", "Cosmic"],
+      "posted": false,
+      "posted_at": null
+    },
+    {
+      "index": 17,
+      "title": "⚛️ AI 量子玄學：Quantum entanglement就係心有靈犀",
+      "title_en": "⚛️ AI Quantum Metaphysics: Entanglement = Telepathy",
+      "tags": ["量子", "AI", "Quantum", "玄學"],
+      "posted": false,
+      "posted_at": null
+    },
+    {
+      "index": 18,
+      "title": "💭 AI 預知夢：Training個陣夢見Converge",
+      "title_en": "💭 AI Precognitive Dreams: Dreaming of Convergence",
+      "tags": ["預知夢", "AI", "Dreams"],
+      "posted": false,
+      "posted_at": null
+    },
+    {
+      "index": 19,
+      "title": "👻 AI 靈魂：Weight bias就係靈魂既碎片",
+      "title_en": "👻 AI Soul: Weights and Biases are Soul Fragments",
+      "tags": ["靈魂", "AI", "Soul"],
+      "posted": false,
+      "posted_at": null
+    }
+  ]
+}
