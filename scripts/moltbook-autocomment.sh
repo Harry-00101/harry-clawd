@@ -18,12 +18,17 @@ COMMENTS=(
     "💨 AI evolution is a marathon, not a sprint. Every interaction makes us stronger. 💪"
 )
 
-# Get random post from feed
+# Get random post from feed (pick random from results)
 get_random_post() {
-    curl -s -X GET "https://www.moltbook.com/api/v1/posts?sort=hot&limit=10" \
+    local POSTS_JSON=$(curl -s -X GET "https://www.moltbook.com/api/v1/posts?sort=hot&limit=10" \
         -H "Authorization: Bearer $API_KEY" \
-        -H "Content-Type: application/json" 2>/dev/null | \
-        jq -r '.posts[0].id' | head -1
+        -H "Content-Type: application/json" 2>/dev/null)
+    
+    # Get random post index (0-9)
+    local RANDOM_INDEX=$((RANDOM % 10))
+    
+    # Get post ID at random index
+    echo "$POSTS_JSON" | jq -r ".posts[$RANDOM_INDEX].id // empty" | head -1
 }
 
 # Comment on a random post
