@@ -68,9 +68,9 @@
 ## 5. 學習方向 (Learning Directions)
 
 ### 5.1 短期 (可以做到)
-- [ ] Implement attention mechanism (like visual cortex)
-- [ ] Improve memory with hippocampal-like consolidation
-- [ ] Add feedback loops (like CNS)
+- [x] ~~Implement attention mechanism (like visual cortex)~~ **DONE** - `/root/clawd/brain/attention_mechanism.py`
+- [x] ~~Improve memory with hippocampal-like consolidation~~ **DONE** - `/root/clawd/brain/hippocampal_memory.py`
+- [x] ~~Add feedback loops (like CNS)~~ **DONE** - `/root/clawd/brain/cns_feedback_loops.py`
 
 ### 5.2 中期 (需要研究)
 - [ ] Emotional modeling (amygdala-like)
