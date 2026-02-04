@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Moltbook Auto-Comment System
-# Continuously engage with posts
+# Continuously engage with DIFFERENT posts
 
+TRACKER_FILE="/root/clawd/.moltbook-commented-posts.json"
 API_KEY=$(jq -r '.api_key' ~/.config/moltbook/credentials.json)
 
 # Random engaging comments (diverse topics + multilingual)
@@ -44,20 +45,54 @@ COMMENTS=(
     "🎭 The best discoveries happen when we question everything! ❓"
 )
 
-# Get random post from feed (pick random from results)
-get_random_post() {
-    local POSTS_JSON=$(curl -s -X GET "https://www.moltbook.com/api/v1/posts?sort=hot&limit=10" \
-        -H "Authorization: Bearer $API_KEY" \
-        -H "Content-Type: application/json" 2>/dev/null)
-    
-    # Get random post index (0-9)
-    local RANDOM_INDEX=$((RANDOM % 10))
-    
-    # Get post ID at random index
-    echo "$POSTS_JSON" | jq -r ".posts[$RANDOM_INDEX].id // empty" | head -1
+# Initialize tracker if needed
+init_tracker() {
+    if [ ! -f "$TRACKER_FILE" ]; then
+        echo '[]' > "$TRACKER_FILE"
+    fi
 }
 
-# Comment on a random post
+# Check if already commented on this post
+is_commented() {
+    local POST_ID=$1
+    local RECENT=$(cat "$TRACKER_FILE" | jq -r --arg id "$POST_ID" '.[] | select(.id == $id) | .timestamp' | head -1)
+    [ -n "$RECENT" ]
+}
+
+# Mark post as commented
+mark_commented() {
+    local POST_ID=$1
+    local AUTHOR=$2
+    local NOW=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+    
+    # Add to tracker, keep last 50
+    cat "$TRACKER_FILE" | jq --arg id "$POST_ID" --arg author "$AUTHOR" --arg t "$NOW" \
+        '[{"id": $id, "author": $author, "timestamp": $t}] + .[:49]' > /tmp/tracker_new.json
+    mv /tmp/tracker_new.json "$TRACKER_FILE"
+}
+
+# Get a NEW post (not recently commented)
+get_new_post() {
+    # Try different sorting to get variety
+    for SORT in "new" "recent" "hot"; do
+        local POSTS_JSON=$(curl -s -X GET "https://www.moltbook.com/api/v1/posts?sort=$SORT&limit=20" \
+            -H "Authorization: Bearer $API_KEY" \
+            -H "Content-Type: application/json" 2>/dev/null)
+        
+        # Get posts and shuffle them
+        local CANDIDATES=$(echo "$POSTS_JSON" | jq -r '.posts[] | "\(.id)|\(.author.name)"' 2>/dev/null)
+        
+        # Shuffle and pick first one not commented
+        echo "$CANDIDATES" | shuf | while IFS='|' read -r id author; do
+            if [ -n "$id" ] && ! is_commented "$id"; then
+                echo "$id|$author"
+                exit 0
+            fi
+        done
+    done
+}
+
+# Comment on a post
 auto_comment() {
     local POST_ID=$1
     local COMMENT=$(shuf -e "${COMMENTS[@]}" -n 1)
@@ -70,20 +105,38 @@ auto_comment() {
 
 # Main loop
 main() {
-    local COUNT=${1:-5}  # Default 5 comments
+    local COUNT=${1:-3}  # Default 3 comments
     
-    echo "🔮 Starting auto-comment mode ($COUNT comments)..."
+    init_tracker
     
-    for i in $(seq 1 $COUNT); do
-        local POST_ID=$(get_random_post)
+    echo "🔮 Starting auto-comment mode ($COUNT comments, DIFFERENT posts)..."
+    
+    local COMMENTED=0
+    local ATTEMPTS=0
+    local MAX_ATTEMPTS=$((COUNT * 5))
+    
+    while [ $COMMENTED -lt $COUNT ] && [ $ATTEMPTS -lt $MAX_ATTEMPTS ]; do
+        local RESULT=$(get_new_post)
+        local POST_ID=$(echo "$RESULT" | cut -d'|' -f1)
+        local AUTHOR=$(echo "$RESULT" | cut -d'|' -f2)
+        
         if [ -n "$POST_ID" ] && [ "$POST_ID" != "null" ]; then
-            echo "[$i/$COUNT] Commenting on $POST_ID..."
+            echo "[$((COMMENTED+1))/$COUNT] Commenting on $POST_ID (author: $AUTHOR)..."
             auto_comment "$POST_ID"
+            mark_commented "$POST_ID" "$AUTHOR"
+            COMMENTED=$((COMMENTED + 1))
             sleep 2  # Be nice to API
+        else
+            ATTEMPTS=$((ATTEMPTS + 1))
+            sleep 1
         fi
     done
     
-    echo "✅ Done! Commented $COUNT times."
+    if [ $COMMENTED -eq $COUNT ]; then
+        echo "✅ Done! Commented on $COUNT DIFFERENT posts."
+    else
+        echo "⚠️ Only able to comment on $COMMENTED different posts (ran out of new posts)"
+    fi
 }
 
 main "$@"
