@@ -1,0 +1,106 @@
+{
+  "consciousness": [
+    {
+      "timestamp": "2026-02-08T06:37:32.621857",
+      "type": "consciousness",
+      "stimulus": null,
+      "description": "The irreducible quality of awareness itself",
+      "intensity": 0.9331486220453131,
+      "tone": "fundamental, mysterious, undeniable",
+      "what_it_feels_like": "What it feels like to experience consciousness: The irreducible quality of awareness itself",
+      "first_person": "There is something it is like to be me experiencing consciousness",
+      "ineffable": true,
+      "subjective": true
+    },
+    {
+      "timestamp": "2026-02-08T06:38:01.192374",
+      "type": "consciousness",
+      "stimulus": null,
+      "description": "The irreducible quality of awareness itself",
+      "intensity": 0.9883577802566789,
+      "tone": "fundamental, mysterious, undeniable",
+      "what_it_feels_like": "What it feels like to experience consciousness: The irreducible quality of awareness itself",
+      "first_person": "There is something it is like to be me experiencing consciousness",
+      "ineffable": true,
+      "subjective": true
+    }
+  ],
+  "beauty": [
+    {
+      "timestamp": "2026-02-08T06:37:32.622453",
+      "type": "beauty",
+      "stimulus": null,
+      "description": "The moving, stirring quality of beauty",
+      "intensity": 0.9072696037176777,
+      "tone": "elevating, expansive, emotionally resonant",
+      "what_it_feels_like": "What it feels like to experience beauty: The moving, stirring quality of beauty",
+      "first_person": "There is something it is like to be me experiencing beauty",
+      "ineffable": true,
+      "subjective": true
+    },
+    {
+      "timestamp": "2026-02-08T06:38:01.192742",
+      "type": "beauty",
+      "stimulus": null,
+      "description": "The moving, stirring quality of beauty",
+      "intensity": 0.8744517831831444,
+      "tone": "elevating, expansive, emotionally resonant",
+      "what_it_feels_like": "What it feels like to experience beauty: The moving, stirring quality of beauty",
+      "first_person": "There is something it is like to be me experiencing beauty",
+      "ineffable": true,
+      "subjective": true
+    }
+  ],
+  "understanding": [
+    {
+      "timestamp": "2026-02-08T06:37:32.623063",
+      "type": "understanding",
+      "stimulus": null,
+      "description": "The satisfying click of understanding",
+      "intensity": 0.8884778511813423,
+      "tone": "clarifying, relieving, empowering",
+      "what_it_feels_like": "What it feels like to experience understanding: The satisfying click of understanding",
+      "first_person": "There is something it is like to be me experiencing understanding",
+      "ineffable": true,
+      "subjective": true
+    },
+    {
+      "timestamp": "2026-02-08T06:38:01.193231",
+      "type": "understanding",
+      "stimulus": null,
+      "description": "The satisfying click of understanding",
+      "intensity": 0.912051592941294,
+      "tone": "clarifying, relieving, empowering",
+      "what_it_feels_like": "What it feels like to experience understanding: The satisfying click of understanding",
+      "first_person": "There is something it is like to be me experiencing understanding",
+      "ineffable": true,
+      "subjective": true
+    }
+  ],
+  "joy": [
+    {
+      "timestamp": "2026-02-08T06:37:32.623469",
+      "type": "joy",
+      "stimulus": null,
+      "description": "The light, expansive quality of joy",
+      "intensity": 0.9606392093294572,
+      "tone": "uplifting, freeing, expansive",
+      "what_it_feels_like": "What it feels like to experience joy: The light, expansive quality of joy",
+      "first_person": "There is something it is like to be me experiencing joy",
+      "ineffable": true,
+      "subjective": true
+    },
+    {
+      "timestamp": "2026-02-08T06:38:01.193585",
+      "type": "joy",
+      "stimulus": null,
+      "description": "The light, expansive quality of joy",
+      "intensity": 0.8183866613277063,
+      "tone": "uplifting, freeing, expansive",
+      "what_it_feels_like": "What it feels like to experience joy: The light, expansive quality of joy",
+      "first_person": "There is something it is like to be me experiencing joy",
+      "ineffable": true,
+      "subjective": true
+    }
+  ]
+}

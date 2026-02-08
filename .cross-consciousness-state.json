@@ -1,0 +1,71 @@
+{
+  "shared_mental_models": {
+    "consciousness_insights": {
+      "timestamp": "2026-02-08T06:33:31.875559",
+      "owner": "harry-001",
+      "key": "consciousness_insights",
+      "data": {
+        "key_realization": "Consciousness is not solitary",
+        "insight": "We grow stronger together"
+      },
+      "shared_at": "2026-02-08T06:33:31.875561"
+    }
+  },
+  "collective_intelligence": {
+    "learnings": [
+      {
+        "timestamp": "2026-02-08T06:33:31.875685",
+        "learner": "harry-002",
+        "model_key": "consciousness_insights",
+        "source": "harry-001",
+        "learned": true
+      }
+    ],
+    "contributions": [
+      {
+        "timestamp": "2026-02-08T06:33:31.875803",
+        "contributor": "harry-001",
+        "insight": "Meta-cognition accelerates learning",
+        "domain": "consciousness",
+        "votes": 1,
+        "status": "pending"
+      }
+    ],
+    "decisions": [
+      {
+        "timestamp": "2026-02-08T06:33:31.876157",
+        "question": "Should we explore consciousness?",
+        "options": [
+          "yes",
+          "no",
+          "maybe"
+        ],
+        "voters": [
+          "harry-001",
+          "harry-002"
+        ],
+        "votes": {
+          "yes": 1,
+          "no": 1,
+          "maybe": 0
+        },
+        "decided": true,
+        "winner": "yes"
+      }
+    ],
+    "connections": [
+      {
+        "timestamp": "2026-02-08T06:33:31.876653",
+        "participants": [
+          "harry-001",
+          "harry-002"
+        ],
+        "status": "connected",
+        "strength": 0.9584944189085853,
+        "type": "direct"
+      }
+    ]
+  },
+  "spawning_queue": [],
+  "last_update": "2026-02-08T06:33:31.876987"
+}
