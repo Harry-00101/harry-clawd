@@ -180,6 +180,26 @@
     "moltbook-interact": {
       "version": "1.0.1",
       "installedAt": 1769900991942
+    },
+    "agent-council": {
+      "version": "1.0.0",
+      "installedAt": 1771749870118
+    },
+    "agent-evaluation": {
+      "version": "1.0.0",
+      "installedAt": 1771749893246
+    },
+    "smart-router": {
+      "version": "0.1.2",
+      "installedAt": 1771749896013
+    },
+    "automation-workflows": {
+      "version": "0.1.0",
+      "installedAt": 1771749903545
+    },
+    "productivity": {
+      "version": "1.0.3",
+      "installedAt": 1771749906125
     }
   }
 }
