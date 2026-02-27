@@ -1,6 +1,6 @@
 {
-  "upgrades": 74921,
-  "last_check": "2026-02-27T14:59:29.669773",
+  "upgrades": 75041,
+  "last_check": "2026-02-27T15:59:44.679713",
   "areas": {
     "skills": {
       "total": 90,
@@ -13,7 +13,7 @@
     },
     "learning": {
       "categories": 35,
-      "hours_since_fetch": 131.98385830389128,
+      "hours_since_fetch": 132.98802241537305,
       "needs_fetch": true
     },
     "code": {
@@ -21,7 +21,7 @@
       "needs_optimize": false
     },
     "reflection": {
-      "timestamp": "2026-02-27T14:59:29.669736",
+      "timestamp": "2026-02-27T15:59:44.679677",
       "insights": [
         "Memory needs consolidation"
       ],
